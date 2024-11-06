@@ -4,6 +4,7 @@ on:
   #push:
   #  branches: 
   #    - main
+
 jobs:
   e2e-tests:
     runs-on: ubuntu-latest
@@ -14,7 +15,6 @@ jobs:
       - name: Run echo
         run: echo hello
 
-      - name: Run echo2
-        run: echo hello2
+      - name: Run echo2        
         run: echo ${{ secrets.USERNAME}}
           
