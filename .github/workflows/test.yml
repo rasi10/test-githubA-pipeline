@@ -11,3 +11,6 @@ jobs:
       #install packages
       - name: Run echo
         run: echo hello
+
+      - name: Run echo2
+        run: echo hello2
