@@ -10,8 +10,7 @@ jobs:
     
     environment: staging
     steps:    
-      #install packages
-      steps:
+      #install packages      
       - name: Run echo
         run: echo hello
 
