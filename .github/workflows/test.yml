@@ -1,0 +1,12 @@
+name: Pipeline
+on: 
+  push:
+    branches: 
+      - main
+jobs:
+  e2e-tests:
+    runs-on: ubuntu-latest
+    steps:
+      #install packages
+      - name: Run echo
+        run: echo hello
