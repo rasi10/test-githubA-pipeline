@@ -7,10 +7,15 @@ on:
 jobs:
   e2e-tests:
     runs-on: ubuntu-latest
-    steps:
+    
+    environment: staging
+    steps:    
       #install packages
+      steps:
       - name: Run echo
         run: echo hello
 
       - name: Run echo2
         run: echo hello2
+        run: echo ${{ secrets.USERNAME}}
+          
