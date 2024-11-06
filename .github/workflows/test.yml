@@ -13,19 +13,21 @@ on:
         required: true
         type: choice
         options:
-          - UAT
-          - STAGING
+          - uat
+          - staging
 
 jobs:
   e2e-tests:
-    runs-on: ubuntu-latest
-    
-    environment: staging
+    runs-on: ubuntu-latest            
+    environment:  ${{ github.event.inputs.environment }}
     steps:    
       #install packages      
+      - name: Choosen environment
+        run: echo ${{ github.event.inputs.environment }}
+
       - name: Run echo
         run: echo hello
-
+        
       - name: Run echo2        
         run: echo ${{ secrets.USERNAME}}
           
